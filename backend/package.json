@@ -1,0 +1,33 @@
+{
+  "name": "notes_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "db:migrate": "npx prisma migrate dev",
+    "db:seed": "npx prisma db seed",
+    "db:studio": "npx prisma studio",
+    "db:reset": "npx prisma migrate reset"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "prisma": {
+    "seed": "node prisma/seeds/user.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.12.2",
+    "@prisma/client": "^6.16.1",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.2",
+    "graphql": "^16.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "prisma": "^6.16.1"
+  }
+}
